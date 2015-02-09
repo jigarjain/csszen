@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loading animation for Android Material Design using pure CSS</title>
+        <meta name="author" content="Jigar Jain">
+        <link href="/csszen/assets/css/style.css" rel="stylesheet" />
+
+        <style type="text/css">
+            /** Basic styling. Look at the bottom for magic */
+            body {
+                min-height: 100vh;
+                color: #009688;
+                background-color: #EEEEEE;
+            }
+
+            .container {
+                display: flex;
+                align-items: center;
+                margin: 75px auto;
+                max-width: 500px;
+                height: 300px;
+                background-color: #F5F5F5;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+                border-radius: 3px;
+            }
+
+            .progress-container {
+                margin: 0 auto;
+                width: 90%;
+                height: 10px;
+                position: relative;
+                overflow: hidden;
+                background-color: #B2DFDB;
+            }
+
+            .progress-container .progress {
+                position: absolute;
+                width: 25%;
+                height: 100%;
+                background-color: #009688;
+                -webkit-animation: slideandwide 1500ms linear infinite;
+                -moz-animation: slideandwide 1500ms linear infinite;
+                animation: slideandwide 1500ms linear infinite;
+            }
+
+            @keyframes slideandwide {
+                0%   {
+                    left: 0;
+                    width: 5%;
+                }
+                100%   {
+                    left: 100%;
+                    width: 70%;
+                }
+            }
+
+            @-webkit-keyframes slideandwide {
+                0%   {
+                    left: 0;
+                    width: 5%;
+                }
+                100%   {
+                    left: 100%;
+                    width: 70%;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="text-center">Loading animation - Android Lollipop style</h1>
+            <p class="text-center">Replication of Andriod (Material Design) loading/progress animation style using pure CSS</p>
+        </header>
+
+        <div class="container">
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div> <!-- /.progress-container -->
+        </div> <!-- /.container -->
+
+
+        <footer class="text-center">
+            <a href="https://twitter.com/ragiJ" class="twitter-follow-button" data-show-count="false" data-dnt="true"></a>
+        </footer>
+
+        <!-- GA code -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-57164756-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+        <!-- Twitter script -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </body>
+</html>
