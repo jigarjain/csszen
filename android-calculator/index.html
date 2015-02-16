@@ -1,0 +1,213 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Android Lollipop Calculator Design</title>
+        <meta name="author" content="Jigar Jain">
+        <link href="/csszen/assets/css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+        <style type="text/css">
+            /** Basic styling. Look at the bottom for magic */
+            body {
+                min-height: 100vh;
+                color: #424242;
+                background-color: #EEEEEE;
+            }
+
+            /** Drawing a phone */
+            .phone {
+                margin: 50px auto;
+                max-width: 330px; /* 300 + 2(border-width)*/
+                height: 540px; /* 410 + 2(border-width)*/
+                border: 15px solid #9E9E9E;
+                border-radius: 10px;
+            }
+
+            /** Notification bar */
+            .phone .notification {
+                height: 4%;
+                font-size: 12px;
+                line-height: 175%;
+                color: #fff;
+                text-align: right;
+                background-color: #00BCD4;
+            }
+
+            .phone .notification ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .phone .notification ul li {
+                margin: 0 2px;
+                display: inline;
+            }
+
+            /** Empty screen */
+            .phone .display {
+                height: 36%;
+            }
+
+            /** Input screen */
+            .input {
+                display: flex;
+                align-items: stretch; /** making height of immediate child to 100% **/
+                position: relative;
+                height: 60%;
+                overflow: hidden;
+                z-index: 100;
+            }
+
+            .input .basic {
+                display: flex;
+                align-items: stretch;
+            }
+
+            .input .basic .digits {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                width: 75%;
+                font-size: 20px;
+                color: #FFF;
+                background-color: #212121;
+            }
+
+            .input .basic .digits .calc-button {
+                flex-basis: 32%;
+            }
+
+            .input .basic .operators {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                width: 20%;
+                font-size: 14px;
+                color: #F5F5F5;
+                background-color: #424242;
+            }
+
+            .input .basic .operators .calc-button {
+                flex-basis: 100%;
+            }
+
+            .input .scientific {
+                position: absolute;
+                right: -75%;
+                display: flex;
+                align-items: stretch;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                width: 80%;
+                height: 100%;
+                font-size: 16px;
+                color: #212121;
+                background-color: #69f0ae;
+                -webkit-transition: all .5s cubic-bezier(0, 1, 0.5, 1); /* For Safari 3.1 to 6.0 */
+                -moz-transition: all .5s cubic-bezier(0, 1, 0.5, 1); /* For Safari 3.1 to 6.0 */
+                -o-transition: all .5s cubic-bezier(0, 1, 0.5, 1); /* For Safari 3.1 to 6.0 */
+                transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+            }
+
+            .input .scientific:hover {
+                right: 0;
+            }
+
+            .input .scientific:hover + .basic .digits{
+                color: #424242;
+            }
+
+            .input .scientific .calc-button {
+                flex-basis: 32%;
+            }
+
+            .calc-button {
+                background-color: transparent;
+                box-shadow: none;
+                border: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 class="text-center">Calculator - Android Lollipop style</h1>
+            <p class="text-center">A CSS only version of Android material design of Calculator</p>
+        </header>
+
+        <div class="container phone">
+            <div class="notification">
+                <ul>
+                    <li><i class="fa fa-wifi"></i></li>
+                    <li><i class="fa fa-clock-o"></i></li>
+                    <li><i class="fa fa-lock"></i></li>
+                    <li>13.25</li>
+                </ul>
+            </div>
+            <div class="display"></div>
+            <div class="input">
+                <div class="scientific">
+                    <button class="calc-button">sin</button>
+                    <button class="calc-button">cos</button>
+                    <button class="calc-button">tan</button>
+                    <button class="calc-button">ln</button>
+                    <button class="calc-button">log</button>
+                    <button class="calc-button">!</button>
+                    <button class="calc-button">&#928;</button>
+                    <button class="calc-button">e</button>
+                    <button class="calc-button">^</button>
+                    <button class="calc-button">(</button>
+                    <button class="calc-button">)</button>
+                    <button class="calc-button">&#8730;</button>
+                </div>
+                <div class="basic">
+                    <div class="digits">
+                        <button class="calc-button">7</button>
+                        <button class="calc-button">8</button>
+                        <button class="calc-button">9</button>
+                        <button class="calc-button">4</button>
+                        <button class="calc-button">5</button>
+                        <button class="calc-button">6</button>
+                        <button class="calc-button">1</button>
+                        <button class="calc-button">2</button>
+                        <button class="calc-button">3</button>
+                        <button class="calc-button">.</button>
+                        <button class="calc-button">0</button>
+                        <button class="calc-button">=</button>
+                    </div>
+                    <div class="operators">
+                        <button class="calc-button">DEL</button>
+                        <button class="calc-button">&#247;</button>
+                        <button class="calc-button">x</button>
+                        <button class="calc-button">-</button>
+                        <button class="calc-button">+</button>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /.container -->
+
+
+        <footer class="text-center">
+            <a href="https://twitter.com/ragiJ" class="twitter-follow-button" data-show-count="false" data-dnt="true"></a>
+        </footer>
+
+        <!-- GA code -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-57164756-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+        <!-- Twitter script -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </body>
+</html>
