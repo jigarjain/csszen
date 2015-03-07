@@ -15,5 +15,8 @@ Collection of some 'stuffs' made using CSS.
 4. **Calculator - Android Material Design** - A CSS only version of Android material design of Calculator <br>
         [Demo](http://jigarjain.github.io/csszen/android-calculator/ "Android Material Design Calculator")
 
+5. **Ripple Effect - Tinder Style** - The ripple effect in tinder mobile app (while searching for matches) is developed using CSS <br>
+        [Demo](http://jigarjain.github.io/csszen/tinder-ripple-effect/ "Ripple Effect Tinder Style")
+
 ###License
 MIT
