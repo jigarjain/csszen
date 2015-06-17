@@ -18,5 +18,8 @@ Collection of some 'stuffs' made using CSS.
 5. **Ripple Effect - Tinder Style** - The ripple effect in tinder mobile app (while searching for matches) is developed using CSS <br>
         [Demo](http://jigarjain.github.io/csszen/tinder-ripple-effect/ "Ripple Effect Tinder Style")
 
+6. **Superheroes Transitions** - Transitioning the items in semicircular fashion by calculating their position offsets using Javascript <br>
+        [Demo](http://jigarjain.github.io/csszen/superhero-transitions/ "Superheroes Transition Effect")
+
 ###License
 MIT
