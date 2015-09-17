@@ -21,5 +21,7 @@ Collection of some 'stuffs' made using CSS.
 6. **Superheroes Transitions** - Transitioning the items in semicircular fashion by calculating their position offsets using Javascript <br>
         [Demo](http://jigarjain.github.io/csszen/superhero-transitions/ "Superheroes Transition Effect")
 
+6. **CSS Ganesha** - Building Ganesha using CSS <br>
+        [Demo](http://jigarjain.github.io/csszen/ganesha/ "Ganesha")
 ###License
 MIT

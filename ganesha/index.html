@@ -1,0 +1,186 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Ganesha</title>
+        <meta name="author" content="Jigar Jain">
+        <link href="/csszen/assets/css/style.css" rel="stylesheet" />
+
+        <style type="text/css">
+            /** Colors **/
+            body {
+                padding: 100px 0;
+                background-color: #29B6C6;
+            }
+
+            .ganesha {
+                position: relative;
+                display: table;
+                margin: auto auto 100px;
+            }
+
+            .crown {
+                position: relative;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            .crown:before, .crown:after {
+                content: "";
+                position: absolute;
+            }
+
+            .crown:before {
+                top: -35px;
+                left: 50%;
+                margin-left: -75px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 75px 25px 75px;
+                border-color: transparent transparent #FFDF08 transparent;
+            }
+
+            .crown:after {
+                top: -50px;
+                left: 50%;
+                margin-left: -40px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 40px 25px 40px;
+                border-color: transparent transparent #E72429 transparent;
+            }
+
+            .face {
+                position: relative;
+                margin: auto;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 267px 103px 0 103px;
+                border-color: #E72429 transparent transparent transparent;
+            }
+
+            .eyes {
+                position: absolute;
+                top: -220px;
+                left: 50%;
+                margin-left: -20px;
+                width: 40px;
+            }
+
+            .eyes:before, .eyes:after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+            }
+
+            .eyes:before {
+                left: -10px;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #FFDF08 transparent transparent;
+            }
+
+            .eyes:after {
+                right: -10px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 0 10px 10px;
+                border-color: transparent transparent transparent #FFDF08;
+            }
+
+            .trunk {
+                position: absolute;
+                top: -22px;
+                left: 4px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 15px 0 15px 38px;
+                border-color: transparent transparent transparent #EF5131;
+                -webkit-transform: rotate(20deg);
+                -ms-transform: rotate(20deg);
+                transform: rotate(20deg);
+            }
+
+            .ears {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                border: 1px solid red;
+                z-index: -1;
+            }
+
+            .ears .left {
+                position: absolute;
+                top: 13px;
+                left: -75px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 14px 100px 90px 0;
+                border-color: transparent #EF5131 transparent transparent;
+                -webkit-transform: rotate(-21deg);
+                -ms-transform: rotate(-21deg);
+                transform: rotate(-21deg);
+            }
+            
+            .ears .right {
+                position: absolute;
+                top: 13px;
+                right: -75px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 14px 0 90px 100px;
+                border-color: transparent transparent transparent #EF5131;
+                -webkit-transform: rotate(21deg);
+                -ms-transform: rotate(21deg);
+                transform: rotate(21deg);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="ganesha">
+            <div class="crown"></div>
+            <div class="face">
+                <div class="eyes">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <div class="trunk"></div>
+            </div><!-- /.face -->
+            <div class="ears">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div><!-- /.ears -->
+        </div><!-- /.ganesha -->
+
+
+        <footer class="text-center">
+            <a href="https://twitter.com/ragiJ" class="twitter-follow-button" data-show-count="false" data-dnt="true"></a>
+        </footer>
+
+        <!-- GA code -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-57164756-2', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+        <!-- Twitter script -->
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </body>
+</html>
